@@ -1,18 +1,13 @@
-n = 23
-i = 1
-while(True):
-    if i * i > n:
-        i -= 2
+largest_perfect_square = 0
+
+# target = 347991
+target = 23
+
+for i in range(1, 1000, 2):
+    if ((i+2) * (i+2) > target):
+        largest_perfect_square = i
         break
-    i += 2
 
-print(i)
-a = (i - 1) // 2
-x = a
-y = -a
-x += 1
-ans = i * i + 1
+diff = target - (largest_perfect_square * largest_perfect_square)
 
-print(x, y)
-
-
+print(largest_perfect_square, diff)
